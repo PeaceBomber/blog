@@ -136,12 +136,13 @@ alias  padon="xinput set-prop 15 \"Device Enabled\" 1"
 alias padoff="xinput set-prop 15 \"Device Enabled\" 0"
 alias vnc='/opt/VNC &'
 alias zotero='nohup /opt/zotero/zotero >/dev/null 2>&1 &'
-alias bye='sudo shutdown -h now' 
 alias padoff='synclient TouchpadOff=1'
 alias cpr='rsync -rltgoDh --info=progress2'
 alias rm='trash'
 #alias grepc='grep -Rn --color'
+
 cd() { builtin cd "$@" && ls -l; }
+alias du='du -h --max-depth=1'
 
 
 function git_branch {
