@@ -113,7 +113,7 @@ fi
 function say {
     mpv http://dict.youdao.com/dictvoice?audio=${1}'&'type=1 > /dev/null
     }
-alias say='say $1' 
+alias say='say $1'
 
 PATH=$PATH:/opt/bnc/
 
@@ -138,8 +138,16 @@ alias vnc='/opt/VNC &'
 alias zotero='nohup /opt/zotero/zotero >/dev/null 2>&1 &'
 alias padoff='synclient TouchpadOff=1'
 alias cpr='rsync -rltgoDh --info=progress2'
-alias rm='trash'
-#alias grepc='grep -Rn --color'
+#alias rm='trash'
+alias cgrep='grep -Rn --color'
+alias grep='grep --color'
+alias gogeng="ssh -p '10060' 'lipengbo@59.172.178.24'"
+alias go200="ssh 'lex@192.168.120.200'"
+alias md2a4report=" pandoc -s --pdf-engine=xelatex --highlight-style=tango -F pandoc-citeproc --dpi=300 -V CJKmainfont='WenQuanYi Micro Hei' -V fontsize=11pt -V documentclass=scrreprt -V papersize=a4"
+alias md2b5report=" pandoc -s --pdf-engine=xelatex --highlight-style=tango -F pandoc-citeproc --dpi=300 -V CJKmainfont='WenQuanYi Micro Hei' -V fontsize=11pt -V documentclass=scrreprt -V papersize=b5"
+alias md2a5report=" pandoc -s --pdf-engine=xelatex --highlight-style=tango -F pandoc-citeproc --dpi=300 -V CJKmainfont='WenQuanYi Micro Hei' -V fontsize=11pt -V documentclass=scrreprt -V papersize=a5"
+alias pip3up="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip3 install -U"
+alias dos2unixall="find . -type f -exec dos2unix {} \;"
 
 cd() { builtin cd "$@" && ls -l; }
 alias du='du -h --max-depth=1'
@@ -154,7 +162,7 @@ PS1="\[\033[1;32m\]${debian_chroot:+($debian_chroot)}\u@\h:\w"
 PS1+="\[\033[1;36m\]\$(git_branch)"
 PS1+="\[\033[1;32m\]$ \[\e[0m\]"
 
-PATH=$PATH:/opt/:/opt/rtklibX/:/opt/bin/
+PATH=$PATH:/opt/:/opt/rtklibX/:/opt/bin/:/home/lex/.local/bin/
 
 #set -o vi
 #. /usr/share/autojump/autojump.sh
