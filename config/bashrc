@@ -167,3 +167,6 @@ PATH=$PATH:/opt/:/opt/rtklibX/:/opt/bin/:/home/lex/.local/bin/
 #set -o vi
 #. /usr/share/autojump/autojump.sh
 
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
